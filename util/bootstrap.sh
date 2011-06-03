@@ -60,7 +60,7 @@ function install_closer_mop() {
 function install_clap() {
     color_echo "installing clap"
     (cd packages &&
-        if [ ! -e closer-mop ]; then
+        if [ ! -e clap ]; then
             git clone git@github.com:garaemon/clap.git
         fi)
 }
