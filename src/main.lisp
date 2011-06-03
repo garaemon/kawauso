@@ -9,3 +9,7 @@
 ;;          (option args)
         
     ))
+
+(defun make ()
+  (format t "Hello, World~%")
+  )

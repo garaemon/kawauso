@@ -65,7 +65,7 @@ function install_clap() {
         fi)
 }
 
-function install_cvs() {
+function install_vcs() {
     case $OS in
         Darwin)
             if [ ! -e "`which cabal`" ]; then
@@ -90,7 +90,8 @@ function install_cl_packages() {
 
 function boot_lisp() {
     rlwrap sbcl --eval "(progn (require :asdf) (setq asdf:*central-registry* '(#p\"${root_dir}/kawauso/systems/\")))" \
-        --eval "(require :clap-builtin)"
+        --eval "(require :kawauso)" \
+        --eval "(kawauso:make)"
 }
 
 # main
@@ -116,10 +117,11 @@ fi
 
 # create directory
 mkdir -p $root_dir
-install_cvs
+install_vcs
 
 # checkout kawauso
 cd $root_dir
+checkout_kawauso
 
 cd kawauso
 mkdir -p packages

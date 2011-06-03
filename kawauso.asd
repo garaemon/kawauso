@@ -4,4 +4,6 @@
     :depends-on (clap-argparse clap-sys)
     :components
     ((:module "src" :components
-              ((:file "kawauso")))))
+              ((:file "kawauso")
+               (:file "main" :depends-on ("kawauso"))
+               ))))

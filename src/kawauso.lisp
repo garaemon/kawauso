@@ -1,5 +1,5 @@
 (defpackage kawauso
   (:use #:common-lisp)
-  (:export #:compile
+  (:export #:make
            #:main)
   )
