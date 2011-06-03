@@ -1,14 +1,13 @@
 (in-package #:kawauso)
 
-(defun argument-parser ()
-  )
-
 (defun main ()
   (let ((args clap-sys:*argv*))
-;;    (multiple-value-bind
-;;          (option args)
-        
-    ))
+    (multiple-value-bind
+          (option args) (parse-arguments args)
+      )))
+
+(defun parse-arguments (args)
+  )
 
 (defun make ()
   (format t "Hello, World~%")
