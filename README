@@ -1,0 +1,26 @@
+file system:
+  kawauso/
+       +---kawauso.asd
+       +---bin/
+       |     a directory to locate lisp binary file
+       |
+       +---src/
+       |     a directory to locate lisp source files of kawauso commonlisp package
+       |
+       +---plugins/
+       |     plugin is a special lisp package which can be registered to kawauso as
+       |     plugin.
+       |
+       +---systems/
+       |     a directory to have symbolic links of asd files.
+       |
+       +---packages/
+       |     a directory to locate the files of the packages
+       |
+       +---expressions/
+       |         | a directory to locate the expressions.
+       |         |
+       |         +---builtin
+       |
+       +---util/
+             a directory to have utility scripts.
